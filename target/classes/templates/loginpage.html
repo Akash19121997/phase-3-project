@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>SportyShoes.com</title>
+</head>
+<body>
+<h1>Welcome to SportyShoes</h1><br>
+
+<p>Please provide Admin Login Details</p>
+ <p th:text=" ${errmsg} " />
+<form action="#" th:action="@{/validate-user}" th:object="${object}" method="post">
+    <label for="email">Enter Email id:</label>
+    <input type="text" th:field="*{email}" >
+   
+    <label for="password">Password</label>
+    <input type="text" th:field="*{password}" >
+   
+    <input type="submit" value="Click Here to Login">   
+</form>
+</body>
+</html>
